@@ -100,7 +100,7 @@ echo					-or-
 echo.
 echo       findfile . *.txt -c .\CopiedTextFiles -p pre_
 echo.
-echo.           SAMPLE OUTPUT: thisfile.txt
+echo.           SAMPLE OUTPUT: pre_thisfile.txt
 echo.
 echo ###################################################################
 
