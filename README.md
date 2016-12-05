@@ -31,4 +31,4 @@ THIS WILL PREPEND .TXT FILES FROM C:\FOLDER WITH "PRE_"
 
       findfile . *.txt -c .\CopiedTextFiles -p pre_
 
-           SAMPLE OUTPUT: thisfile.txt
+           SAMPLE OUTPUT: pre_thisfile.txt
