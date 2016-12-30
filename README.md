@@ -1,6 +1,8 @@
 # Findfile
 Script used to copy files recursively based on their file extensions. Also gives the ability to prepend the filenames for the files copied.
 
+# Feedback
+Hi all, if there are any questions about this tool, please feel free to reach out to me. I often try to provide documentation, but I sometimes don't understand the lack of clarity that I provide so your feedback will be really useful.
 
 # Usage
 Findfile.cmd SOURCE_DIR FILENAMES [[-h | --help | /? ]]  
