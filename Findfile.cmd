@@ -2,9 +2,10 @@
 setlocal enabledelayedexpansion
 if exist __items.list (del /f /q __items.list)
 set SOURCE_DIR=%1
-if "%1"=="-h" goto help
-if "%1"=="--help" goto help
-if "%1"=="/?" goto help
+::echo SOURCE_DIR : %SOURCE_DIR%
+if [%1]==[-h] goto help
+if [%1]==[--help] goto help
+if [%1]==[/?] goto help
 if [%1] == [] goto help
 if [%2] == [] echo "ERROR--Missing file specification"
 if [%2] == [] goto help
@@ -15,7 +16,10 @@ if (%4)==(.) set COPYLOC=%cd%
 set PREPEND_FLAG=%5
 set PREPEND_VAL=%6
 
-for /f %%F IN ('dir /s /b "%SOURCE_DIR%"\"%FILENAMES_TO_COPY%"') do (
+set SearchPathString=%SOURCE_DIR%\%FILENAMES_TO_COPY%
+::echo SearchPathString: %SearchPathString%
+
+for /f "delims=" %%F IN ('dir /s /b %SearchPathString%') do (
 	echo %%F
 	echo "%%F" >> __items.list
 )
